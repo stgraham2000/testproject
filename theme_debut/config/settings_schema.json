@@ -3,7 +3,7 @@
     "name": "theme_info",
     "theme_name": "Debut",
     "theme_author": "Shopify",
-    "theme_version": "7.1.2",
+    "theme_version": "7.1.1",
     "theme_documentation_url": "https://help.shopify.com/manual/using-themes/themes-by-shopify/debut",
     "theme_support_url": "https://support.shopify.com/"
   },
@@ -21,7 +21,7 @@
       {
         "type": "header",
         "content": {
-          "en": "Text and more buttons",
+          "en": "Text and buttons",
           "de": "Text und Buttons",
           "fr": "Texte et boutons",
           "ja": "テキストとボタン",
@@ -34,19 +34,18 @@
         "type": "color",
         "id": "color_text",
         "label": {
-          "en": "Headings links",
+          "en": "Headings and links",
           "de": "Titel und Links",
           "fr": "En-têtes et liens",
           "ja": "見出しとリンク",
           "pt-BR": "Títulos e links",
           "it": "Titoli e link",
           "es": "Títulos y enlaces"
-
         },
         "default": "#3d4246"
       },
       {
-        "type":      "color",
+        "type": "color",
         "id": "color_body_text",
         "label": {
           "en": "Body text",
