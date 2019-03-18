@@ -13,20 +13,22 @@
 
 {% if new_comment %}
   {%- assign duplicate_comment = false %}
+
   {% for comment in article.comments %}
     {% if comment.id == new_comment_id %}
+{% Steve added this %}
       {%- assign duplicate_comment = true %}
       {% break %}
     {% endif %}
   {% endfor %}
 
   {% if duplicate_comment %}
-    {%- assign number_of_comments = article.comments_count -%}
+    {%- assign number_comments = article.comments_count -%}
   {% else %}
-    {%- assign number_of_comments = article.comments_count | plus: 1 -%}
+    {%- assign number_comments = article.comments_count | plus: 1 -%}
   {% endif %}
 {% else %}
-  {%- assign number_of_comments = article.comments_count -%}
+  {%- assign number_of_comments = article.comments_count + 1 -%}
 {% endif %}
 
 <article class="page-width">
@@ -48,7 +50,7 @@
           {% paginate article.comments by 5 %}
 
             {% comment %}
-              #comments is required, it is used as an anchor link by Shopify.
+              #comments is required - more comments, it is used as an anchor link by Shopify.
             {% endcomment %}
             <div id="comments">
 
@@ -64,7 +66,7 @@
 
               <ul class="comments">
                 {% comment %}
-                  If a comment was just submitted with no blank field, show it.
+                  If a comment has no blank field, show it.
                 {% endcomment %}
                 {% if new_comment %}
                   <li id="{{ comment.id }}" class="comment">
